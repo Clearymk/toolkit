@@ -1,4 +1,5 @@
 /* pages/function/Joke/Joke.wxss */
+
 .view-content {
   display: flex;
   flex-direction: column;
@@ -11,9 +12,9 @@
 
 .view-joke {
   width: 500rpx;
-  height: 500rpx;
-  margin-top: 100rpx;
+  height: 700rpx;
   background: #eee;
+  margin-top: 100rpx;
   border-radius: 20rpx;
 }
 
