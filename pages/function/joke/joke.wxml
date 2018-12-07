@@ -1,7 +1,7 @@
 <view class='view-content'>
   <text class='text-title'>笑话大全</text>
   <view class='view-joke'>
-    <text></text>
+    <text>{{joke_content}}</text>
   </view>
-  <button class='btn-refresh'>随机一个</button>
+  <button class='btn-refresh' bindtap='bindRefresh'>随机一个</button>
 </view>

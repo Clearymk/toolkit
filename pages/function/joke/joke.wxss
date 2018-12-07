@@ -1,4 +1,22 @@
 /* pages/function/Joke/Joke.wxss */
 .view-content {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-title {
+  margin-top: 50rpx;
+}
+
+.view-joke {
+  width: 500rpx;
+  height: 500rpx;
+  margin-top: 100rpx;
+  background: #eee;
+  border-radius: 20rpx;
+}
+
+.btn-refresh {
+  margin-top: 100rpx;
 }
