@@ -31,10 +31,25 @@ Page({
       },
       success: function(res) {
         that.setData({
-          result: res.data.result,
-          //title: res.data.result[0].title,
-          code: res.data.error_code,
-          flag:true
+          code: res.data.error_code
+        })
+        if (that.data.code != 0) {
+          that.setData({
+            //cdoe: res.data.error_code,
+            flag: false
+          })
+        } else {
+          that.setData({
+            result: res.data.result,
+            //title: res.data.result[0].title,
+            //code: res.data.error_code,
+            flag: true
+          })
+        }
+      },
+      fail: function() {
+        that.setData({
+          code: res.data.error_code
         })
       }
     })
