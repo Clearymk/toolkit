@@ -5,7 +5,7 @@
   margin-top: 50rpx;
 }
 
-#idCardInput {
+#charConvert {
   width: 80%;
   margin-left: 10rpx;
   background: #eee;
@@ -30,16 +30,11 @@
   flex-direction: column;
 }
 
-.resDView{
-  
+.resView{
   border-style: solid;
   border-color: #c0c0c0;
   border-right-style: none;
   border-left-style: none;
-}
-
-.resBView{
-  width: 80%;
 }
 
 #text-content {

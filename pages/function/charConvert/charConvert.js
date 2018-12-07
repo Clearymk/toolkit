@@ -1,36 +1,34 @@
 // pages/function/idCardQuery/idCardQuery.js
 Page({
   data: {
-    id: ''
+    text: ''
   },
   getInput: function (e) {
     this.setData({
-      id: e.detail.value
+      text: e.detail.value
     })
   },
 
-  queryIdCard: function () {
+  queryCharConvert: function () {
     let that = this;
     wx.request({
-      url: 'http://apis.juhe.cn/idcard/index',
+      url: 'http://japi.juhe.cn/charconvert/change.from',
       method: 'get',
       data: ({
-        key: '9c2a2cfadb069ba4fe463d96a0841876',
-        cardno: this.data.id,
-        dtype: 'json'
+        key: '4519e68ef608a8ff79a86a19e49ba7a4',
+        text: this.data.text,
+        type: 2
       }),
       success: function (res) {
-        if (res.data.result == null) {
+        if (res.data.error_code != 0) {
           that.setData({
-            "resultcode": res.data.resultcode,
+            "error_code": res.data.error_code,
             "reason": res.data.reason
           })
         } else {
           that.setData({
-            "resultcode": res.data.resultcode,
-            "sex": res.data.result.sex,
-            "area": res.data.result.area,
-            "birthday": res.data.result.birthday
+            "error_code": res.data.error_code,
+            "outstr" : res.data.outstr
           })
         }
       }

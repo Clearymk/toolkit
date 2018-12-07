@@ -1,26 +1,18 @@
 <view id='inputView'>
-  <input id='idCardInput' placeholder='请输入身份证号' bindinput='getInput'></input>
+  <input id='charConvert' placeholder='请输入文字' bindinput='getInput'></input>
 </view>
 <view>
-  <button id="submitButton" bindtap='queryIdCard'>
+  <button id="submitButton" bindtap='queryCharConvert'>
     <view id='text-content'>
       <text>确定</text>
     </view>
   </button>
-  <view id='resView' wx:if="{{resultcode == 200}}">
-
-    <view class='resDView'>
-      <text class='resText'>性别： {{sex}}</text>
-    </view>
-
-    <view class='resBView'>
-      <text class='resText'>居住地： {{area}}</text>
-    </view>
-    <view class='resDView'>
-      <text class='resText'>出生日期：{{birthday}}</text>
+  <view id='resView' wx:if="{{error_code == 0}}">
+    <view class='resView'>
+      <text class='resText'>输出： {{outstr}}</text>
     </view>
   </view>
-  <view wx:if="{{resultcode != 200}}" class= "errorView">
+  <view wx:if="{{error_code != 0}}" class= "errorView">
     <text class='errorMessage'>{{reason}}</text>
   </view>
 </view>
