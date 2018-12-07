@@ -1,0 +1,27 @@
+<view id='contxet'>
+  <view class='outView' id="test" >
+    <view class='innerView' bindtap='idCardQuery'>
+      <text class='viewText'>身份证查询</text>
+    </view>
+
+    <view class='innerView' bindtap='ipAddressQuery'>
+      <text class='viewText'>IP地址查询</text>
+    </view>
+  </view>
+  <view class='outView'>
+    <view class='innerView'>
+      <text class='viewText'>货币汇率</text>
+    </view>
+    <view class='innerView'>
+      <text class='viewText' bindtap='mobileQuery'>手机号码归属地查询</text>
+    </view>
+  </view>
+  <view class='outView'>
+    <view class='innerView' bindtap='historyToday'>
+      <text class='viewText'>历史上的今天</text>
+    </view>
+    <view class='innerView' bindtap='bindJoke'>
+      <text class='viewText'>笑话大全</text>
+    </view>
+  </view>
+</view>

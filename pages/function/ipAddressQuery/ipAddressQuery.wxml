@@ -1,0 +1,22 @@
+<view id='inputView'>
+  <input id='idIpAddress' placeholder='请输入IP地址号' bindinput='getInput'></input>
+</view>
+<view>
+  <button id="submitButton" bindtap='queryIpAddress'>
+    <view id='text-content'>
+      <text>确定</text>
+    </view>
+  </button>
+  <view id='resView' wx:if="{{resultcode == 200}}">
+    <view class='resTView'>
+      <text class='resText'>地区： {{area}}</text>
+    </view>
+    <view class='resBView'>
+      <text class='resText'>地址：{{location}}</text>
+    </view>
+  </view>
+
+    <view wx:if="{{resultcode != 200}}" class='errorView'>
+    <text class='errorMessage'>{{reason}}</text>
+  </view>
+</view>

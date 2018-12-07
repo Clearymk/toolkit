@@ -1,0 +1,22 @@
+/**index.wxss**/
+.outView{
+   display: flex;
+}
+
+.innerView{
+  margin: 8rpx;
+  width: 60%;
+  height: 300rpx;
+  text-align: center;
+  background: #a0a0a0;
+}
+
+.viewText{
+  color: #fff;
+  position: relative;
+  top: 45%;
+}
+
+#content{
+  width: 100%;
+}

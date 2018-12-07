@@ -1,0 +1,31 @@
+<view id='inputView'>
+  <input id='phoneNumberInput' placeholder='手机号' bindinput='getInput'></input>
+</view>
+<view>
+  <button id="submitButton" bindtap='queryMobile'>
+    <view id='text-content'>
+      <text>确定</text>
+    </view>
+  </button>
+  <view id='resView' wx:if="{{resultcode == 200}}">
+    <view class='resTView'>
+      <text class='resText'>省份： {{province}}</text>
+    </view>
+    <view class='resTView'>
+      <text class='resText'>城市：{{city}}</text>
+    </view>
+    <view class='resTView'>
+      <text class='resText'>区号： {{areacode}}</text>
+    </view>
+    <view class='resTView'>
+      <text class='resText'>邮编：{{zip}}</text>
+    </view>
+    <view class='resBView'>
+      <text class='resText'>运营商：{{company}}</text>
+    </view>
+  </view>
+
+    <view wx:if="{{resultcode != 200}}" class='errorView'>
+    <text class='errorMessage'>{{reason}}</text>
+  </view>
+</view>

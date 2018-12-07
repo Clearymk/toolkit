@@ -1,0 +1,38 @@
+<view class='view-col'>
+  <view class='view-month'>
+    <text>Month:</text>
+    <view class='input-month'>
+      <input placeholder='请输入月份' bindinput='bindInputMonth'></input>
+    </view>
+  </view>
+  <view class='view-day'>
+    <text>Day:</text>
+    <view class='input-day'>
+      <input placeholder='请输入日期' bindinput='bindInputDay'></input>
+    </view>
+  </view>
+  <view class='view-mid'>
+    <view class='view-button'>
+      <button bindtap='bindQuery'>查询</button>
+    </view>
+  </view>
+  <view class='view-content' wx:if='{{code == 0}}'>
+    <view wx:key='unique' wx:for='{{result}}'>
+      <view class='view-if' wx:if='{{flag}}'>
+        <view class='text-res'>
+          <text>title: {{item.title}}</text>
+          <text>year: {{item.year}}</text>
+          <text>month: {{item.month}}</text>
+          <text>day: {{item.day}}</text>
+          <text>describe: {{item.des}}</text>
+          <view class='view-img'>
+            <image class='res-img' src='{{item.pic}}'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='view-error' wx:if='{{code!=0}}'>
+    <text>输入数据不合法...</text>
+  </view>
+</view>
