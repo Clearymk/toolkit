@@ -1,0 +1,7 @@
+<view class='view-content'>
+  <text class='text-title'>笑话大全</text>
+  <view class='view-joke'>
+    <text></text>
+  </view>
+  <button class='btn-refresh'>随机一个</button>
+</view>
