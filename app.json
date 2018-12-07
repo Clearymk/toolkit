@@ -5,7 +5,8 @@
     "pages/function/ipAddressQuery/ipAddressQuery",
     "pages/function/historyToday/historyToday",
     "pages/function/mobileQuery/mobileQuery",
-    "pages/function/joke/joke"
+    "pages/function/joke/joke",
+    "pages/function/charConvert/charConvert"
   ],
   "window": {
     "backgroundTextStyle": "light",

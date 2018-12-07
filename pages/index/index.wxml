@@ -9,8 +9,8 @@
     </view>
   </view>
   <view class='outView'>
-    <view class='innerView'>
-      <text class='viewText'>货币汇率</text>
+    <view class='innerView' bindtap='charconvert'>
+      <text class='viewText'>火星文转换</text>
     </view>
     <view class='innerView'>
       <text class='viewText' bindtap='mobileQuery'>手机号码归属地查询</text>

@@ -22,10 +22,16 @@ Page({
       url: '../function/mobileQuery/mobileQuery',
     })
   },
+
   bindJoke: function() {
     wx.navigateTo({
       url: '../function/joke/joke',
     })
-  }
+  },
 
+  charconvert : function() {
+    wx.navigateTo({
+      url: '../function/charConvert/charConvert',
+    })
+  }
 })
